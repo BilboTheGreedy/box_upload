@@ -1,0 +1,12 @@
+{
+  "boxAppSettings": {
+    "clientID": "",
+    "clientSecret": "",
+    "appAuth": {
+      "publicKeyID": "",
+      "privateKey": "/etc/ssl/certs/box_private.pem",
+      "passphrase": ""
+    }
+  },
+  "enterpriseID": ""
+}
