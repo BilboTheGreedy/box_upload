@@ -2,6 +2,7 @@ package main
 
 import (
 	"crypto/tls"
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"net/http"
@@ -41,5 +42,11 @@ func getToken(token string, client_id string, client_secret string, debug bool) 
 		fmt.Println(bodyString)
 		return
 	}
+	
+	var boxToken BoxToken
+	if err := json.Unmarshal([]byte(bodyString), &boxToken); err != nil {
+		panic(err)
+	}
+
 	fmt.Println(bodyString)
 }
